@@ -18,4 +18,5 @@ class MarsRoverTest {
         Assertions.assertEquals(1 , currentLocation.getY());
         Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
     }
+
 }

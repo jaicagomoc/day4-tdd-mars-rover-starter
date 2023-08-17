@@ -13,7 +13,14 @@ public class MarsRover {
             if(location.getDirection() == Direction.NORTH){
                 location.setY(location.getY() + 1);
             }
+            extracted();
         }
+    }
+
+    private void extracted() {
+        String currentLocation = String.format("The Mars Rover's current location is: (%d, %d, %s)",
+                location.getX(), location.getY(), location.getDirection());
+        System.out.println(currentLocation);
     }
 
     public Location getCurrentLocation() {
