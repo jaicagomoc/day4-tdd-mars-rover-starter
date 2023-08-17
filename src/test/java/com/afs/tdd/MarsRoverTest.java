@@ -19,7 +19,7 @@ class MarsRoverTest {
         Assertions.assertEquals(Direction.NORTH , currentLocation.getDirection());
     }
     @Test
-    void should_change_to_location_0_1_N_when_executeCommand_given_0_0_South_and_command_Move() {
+    void should_change_to_location_0_negative1_S_when_executeCommand_given_0_0_South_and_command_Move() {
         // Given
         Location initialLocation = new Location(0, 0, Direction.SOUTH);
         Command givenCommand = Command.MOVE;
@@ -29,7 +29,7 @@ class MarsRoverTest {
         Location currentLocation = marsRover.getCurrentLocation();
         // Then
         Assertions.assertEquals(0 , currentLocation.getX());
-        Assertions.assertEquals(1 , currentLocation.getY());
+        Assertions.assertEquals(-1 , currentLocation.getY());
         Assertions.assertEquals(Direction.SOUTH , currentLocation.getDirection());
     }
 
