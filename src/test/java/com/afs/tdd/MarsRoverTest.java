@@ -167,10 +167,13 @@ class MarsRoverTest {
         // Given
         Location initialLocation = new Location(0, 0, Direction.NORTH);
         MarsRover marsRover = new MarsRover(initialLocation);
-        marsRover.executeCommand(Command.MOVE);
-        marsRover.executeCommand(Command.TURN_LEFT);
-        marsRover.executeCommand(Command.MOVE);
-        marsRover.executeCommand(Command.TURN_RIGHT);
+        int numberOfCommands = 1;
+        for (int i = 0; i < numberOfCommands ; i++){
+            marsRover.executeCommand(Command.MOVE);
+            marsRover.executeCommand(Command.TURN_LEFT);
+            marsRover.executeCommand(Command.MOVE);
+            marsRover.executeCommand(Command.TURN_RIGHT);
+        }
         // When
         Location currentLocation = marsRover.getCurrentLocation();
         // Then

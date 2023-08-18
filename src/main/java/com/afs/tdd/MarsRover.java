@@ -56,13 +56,13 @@ public class MarsRover {
     }
 
     private void extracted(){
-         String initialLocation = String.format("(%d,%d,%s)",
-                 location.getX(),location.getY(),getAbbreviationOfDirection());
-         String currentLocation = String.format("(%d,%d,%s)",
+        String initialLocation = String.format("(%d,%d,%s)",
+                location.getX(),location.getY(),getAbbreviationOfDirection());
+        String currentLocation = String.format("(%d,%d,%s)",
                 location.getX(), location.getY(), getAbbreviationOfDirection());
-         String printMessage = String.format("The Mars Rover's current location is %s given initial location %s "
-                 ,currentLocation,initialLocation);
-         System.out.println(printMessage);
+        String printMessage = String.format("The Mars Rover's current location is %s given initial location %s "
+                ,currentLocation,initialLocation);
+        System.out.println(printMessage);
     }
 
     public Location getCurrentLocation() {
